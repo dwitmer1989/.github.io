@@ -1,8 +1,3 @@
-/**
- * Builds PaymentRequest for credit cards, but does not show any UI yet.
- *
- * @return {PaymentRequest} The PaymentRequest oject.
- */
 function initPaymentRequest() {
     let networks = ['amex', 'diners', 'discover', 'jcb', 'mastercard', 'unionpay',
         'visa', 'mir'];
@@ -13,14 +8,14 @@ function initPaymentRequest() {
     }];
   
     let details = {
-      total: {label: 'Donation', amount: {currency: 'USD', value: '55.00'}},
+      total: {label: 'Final price', amount: {currency: 'USD', value: '4.99'}},
       displayItems: [
         {
-          label: 'Original donation amount',
-          amount: {currency: 'USD', value: '65.00'},
+          label: 'Original price amount',
+          amount: {currency: 'USD', value: '14.99'},
         },
         {
-          label: 'Friends and family discount',
+          label: 'Student discount',
           amount: {currency: 'USD', value: '-10.00'},
         },
       ],
