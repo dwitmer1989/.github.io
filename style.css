@@ -155,10 +155,11 @@ body{
 #loginPane{
     font-family: 'Courier New', Courier, monospace;
     text-align: left;
-    width: 50vw;
+    width: 500px;
     height: 50vh;
     margin: auto;
     margin-top: 150px;
+
 }
 
 .loginPaneLine{
