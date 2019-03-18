@@ -1,20 +1,140 @@
-.gameHeader{
-    background: darkblue; 
-    width: 100%; 
-    height: 50px; 
-    position: absolute; 
-    top: 0px; 
-    left: 0px; 
-    display: flex;  
-}
-
 body{
-    padding-top: 70px; 
-    max-width: 1024px;
-    margin: auto;  
-    text-align: center; 
+    margin: 0px; 
+    padding: 0px; 
+    width: 100vw; 
+    height: 100vh; 
+    font-family: fantasy;
+    color: #c9c9c9; 
 }
 
-li{
-    list-style: none; 
+
+.banner{
+    width: 100vw; 
+    background-image: url("images/WebBannerBackground.png"); 
+    background-size: cover; 
+    height: 350px; 
+    text-align: center;
+    align-content: center; 
+    position: sticky;
+    top: -160px; 
+}
+
+.bannerTop{
+    min-width: 100%;
+    height: 30px; 
+    text-align: left;  
+    display: flex; 
+}
+
+.bannerTopItem{
+    padding-left: 15px;
+    width: 25%;
+    margin-top: -15px;
+    display: flex;
+}
+
+.bannerTopItemSubItem{
+    width: 50%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.banner h2{
+    min-width: 100%; 
+}
+
+#gameTypeContainer{ 
+    margin-top: 10px; 
+    height: 170px; 
+    width: 100%; 
+    text-align: left;
+}
+
+.carousel{
+    padding-right: 3%;
+    max-width: 1440px;
+    margin: auto; 
+}
+
+.gameTypeItem{
+    width: 23.75%; 
+    margin-left: 1%;
+    height: 100%; 
+}
+
+.gameTypeItem button{
+    width: 100%;
+    height: 15vh;
+    background-size: cover; 
+}
+
+.advertisement{
+    border-style: solid; 
+    width: 250px;
+    margin: auto; 
+    margin-top: -20px;  
+}
+
+.popularGamesContainer{
+    width: 100vw;  
+    display: flex; 
+    flex-wrap: wrap; 
+    padding: 0px; 
+    max-width: 1440px; 
+    min-width: 1000px; 
+    margin: auto; 
+}
+
+.popularGame{
+    background: lightgray; 
+    border-style: solid;
+    height: 20vh; 
+    width: 20%;
+    margin: 2.2%;
+}
+
+#footer{
+    margin-top: 10vh; 
+    width: 100vw; 
+    background-image: url("images/footerBackground.png"); 
+    background-size: cover; 
+    height: 20vh; 
+    position: relative;
+}
+
+.footerStrip{
+    display:flex;
+    width: 100vw; 
+    height: 70px; 
+}
+
+.footerAdvertisementLeft, .footerAdvertisementRight{
+    height: 100%;
+    width: 50%;
+    padding: 10px; 
+    color:black;
+}
+
+.footerAdvertisementRight{
+    text-align: right;
+}
+
+.footerDivider{
+    width: 20%;
+    text-align: center;
+    padding-top: 60px;
+}
+
+#social{
+    position: absolute; 
+    bottom: 0px;
+    right:0px;
+    width: 175px;
+    height: 150px;
+}
+
+.socialItem{
+    width: 100%;
+    text-align: center; 
+    height: 30%;
 }
