@@ -104,6 +104,7 @@ body{
     height: 20vh; 
     width: 20%;
     margin: 2.2%;
+    box-shadow: 2px 4px 10px 2px rgb(90, 90, 90);
 }
 
 #footer{
