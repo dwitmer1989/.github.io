@@ -11,7 +11,7 @@ body{
     margin-top: 20px;
     font-family: fantasy;
     background: none;
-    color: #c9c9c9; ;
+    color: #c9c9c9;
     font-size: 18px;
     border-style: none;
 }
@@ -25,6 +25,12 @@ body{
     align-content: center; 
     position: sticky;
     top: -160px; 
+}
+
+.noGamePane{
+    height: 150px;
+    background-image: url("Images/WebBannerBackground.png"); 
+    background-size: cover; 
 }
 
 .bannerTop{
@@ -140,5 +146,51 @@ body{
     position: absolute;
     bottom: -40px;
     right: 8%;
+}
+
+#loginContent{
+    display:flex;
+}
+
+#loginPane{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.loginPaneLine{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.loginLeft{
+    margin-top: 10px;
+    min-width: 20%;
+}
+.loginRight{
+    margin-top: 10px;
+    min-width: 75%;
+}
+
+.loginRight input{
+    width: 100%;
+    background: whitesmoke;
+}
+
+.signInWithGoogle{
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
 }
 
