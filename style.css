@@ -10,7 +10,7 @@ body{
 
 .banner{
     width: 100vw; 
-    background-image: url("images/WebBannerBackground.png"); 
+    background-image: url("Images/WebBannerBackground.png"); 
     background-size: cover; 
     height: 350px; 
     text-align: center;
@@ -96,7 +96,7 @@ body{
 #footer{
     margin-top: 10vh; 
     width: 100vw; 
-    background-image: url("images/footerBackground.png"); 
+    background-image: url("Images/footerBackground.png"); 
     background-size: cover; 
     height: 20vh; 
     position: relative;
