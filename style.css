@@ -10,9 +10,8 @@ body{
 
 .banner{
     width: 100vw; 
-    /* background-image: url("images/WebBannerBackground.png"); 
-    background-size: cover;  */
-    background: darkgreen;
+    background-image: url("images/WebBannerBackground.png"); 
+    background-size: cover; 
     height: 350px; 
     text-align: center;
     align-content: center; 
