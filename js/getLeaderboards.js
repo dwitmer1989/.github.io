@@ -5,7 +5,7 @@ function getLeadersFromDatabase(){
 function dbConnect(){
     return $.ajax({
         type: "GET",
-        url: "http://relevantdevelopment.tech/GFTDatabaseConnector/mysqlConnect.php",
+        url: "https://relevantdevelopment.tech/GFTDatabaseConnector/mysqlConnect.php",
         async: false
     }).responseText;
 }
