@@ -8,5 +8,4 @@ function dbConnect(){
         url: "https://relevantdevelopment.tech/GFTDatabaseConnector/mysqlConnect.php",
         async: false
     }).responseText;
-
 }
