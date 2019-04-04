@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "SSH FS - root",
+			"uri": "ssh://root/"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AWD_Final_Project"
+	}
+}
