@@ -1,20 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-     content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>Games for Happy </title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <div class="gameHeader">
-    <img src="Images/GFT_Logo.png"></img>
-    <button onclick="window.location.href='Games/games.html'">Games</button>
-    <button id="buyButton">Donate!</button>
-  </div>
- 
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=yes">
+    <title>Home | Games For Teens </title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="bannerTop">
+          <div class="bannerTopItem">
+            <h1>Games4Teens</h1>
+          </div>
+          
+          <div class="bannerTopItem">
+          </div>
+          
+          <div class="bannerTopItem">
+            <h4 onclick="window.location.href='/leaderboards.html'">Leader Boards</h4>
+          </div>
+          
+          <div class="bannerTopItem">
+            <div class="bannerTopItemSubItem" onclick="window.location.href='login.html'">
+              <h4>Login/Signup</h4>
+            </div>
+            <div class="bannerTopItemSubItem">
+              <button id="donateButton">Donate</button>
+            </div>
+          </div>
+      </div>
+
+      <h2>Welcome to the world of fun</h2>
+      <div class="advertisement">
+        <h5>Advertisement goes here</h5>
+      </div>
+    <div id="gameTypeContainer">
+        <div class="carousel">
+          <div class="gameTypeItem">
+            Puzzle
+            <button style="background-image: url('Images/puzzleButtonBackground.png')"></button>
+          </div>
+          
+          <div class="gameTypeItem">
+            Action
+            <button style="background-image: url('Images/actionButtonBackground.png')"></button>
+          </div>
+          
+          <div class="gameTypeItem">
+            Trivia
+            <button style="background-image: url('Images/triviaButtonBackground.png')"></button>
+          </div>
+          
+          <div class="gameTypeItem">
+            Cards
+            <button style="background-image: url('Images/cardsButtonBackground.png')"></button>
+          </div>
+
+          <div class="gameTypeItem">
+            Adventure
+            <button style="background-image: url('Images/adventureButtonBackground.png')"></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 style="padding-left: 15px">Popular Games</h2>
+    <div class="popularGamesContainer">
+      <div class="popularGame" onclick="window.location.href='Games/GameOfWar/index.html'">
+        <image src="Images/gameOfWar.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame" onclick="window.location.href='Games/2048/index.html'">
+        <image src="Images/2048.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame" onclick="window.location.href='Games/Chess/index.html'">
+        <image src="Images/chessLogo.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame">
+        <image src="Images/placeholderGameImage.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame">
+        <image src="Images/placeholderGameImage.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame">
+        <image src="Images/placeholderGameImage.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame">
+        <image src="Images/placeholderGameImage.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame">
+        <image src="Images/placeholderGameImage.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame">
+        <image src="Images/placeholderGameImage.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame">
+        <image src="Images/placeholderGameImage.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame">
+        <image src="Images/placeholderGameImage.png" style="width: 100%; max-height: 100%">
+      </div>
+      <div class="popularGame">
+        <image src="Images/placeholderGameImage.png" style="width: 100%; max-height: 100%">
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="footerStrip">
+        <div class="footerAdvertisementLeft">
+          advertisement goes here
+        </div>
+        <div class="footerAdvertisementSpacer"></div>
+        <div class="footerAdvertisementSpacer"></div>
+        <div class="footerAdvertisementSpacer"></div>
+        <div class="footerAdvertisementRight">
+          advertisement goes here
+        </div>
+      </div>
+
+      <div class="footerStrip">
+        <div class="footerDivider">
+          <p>About</p>
+        </div>
+        <div class="footerDivider">
+          <p>Terms of Use </p>
+        </div>
+        <div class="footerDivider">
+          <p>Contact Us </p>
+        </div>
+        <div class="footerDivider">
+          <p>Privacy Policy</p>
+        </div>
+        <div class="footerDivider">
+          <p >Follow Us</p>
+        </div>
+      </div>
+      <P align="center" style="color:black">Copyright GamesForTeens 2019</P>
+      <div id="social">
+        <image src="Images/instagramLogo.png" style="height: 40px">
+        <image src="Images/fbLogo.png"style="height: 40px">
+      </div>
+
+    <script src="Payment.js"></script> 
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$('.carousel').slick({ 
+  autoplay: true,
+  arrows: false,
+  slidesToShow: 4,
+});
+});
+</script>
+
+
+  </body>
 
 </html>
-<script src="payment.js"></script>

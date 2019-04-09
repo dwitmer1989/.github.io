@@ -78,7 +78,7 @@ function initPaymentRequest() {
     }, undefined, 2);
   }
   
-  const payButton = document.getElementById('buyButton');
+  const payButton = document.getElementById('donateButton');
   payButton.setAttribute('style', 'display: none;');
   if (window.PaymentRequest) {
     let request = initPaymentRequest();
