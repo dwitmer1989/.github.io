@@ -2,10 +2,25 @@
 //login user on any window that includes this javascript
 document.addEventListener("DOMContentLoaded", function() {
     if(localStorage.getItem('currentUser') != null){
-        document.getElementById('loginSignup').innerHTML = "Welcome " + localStorage.getItem('currentUser'); 
+        document.getElementById('loginSignup').innerHTML = "<h4>Welcome " + localStorage.getItem('currentUser') + "</h4>"; 
     } 
   })
 
+function showLogout(){
+    if(localStorage.getItem('currentUser') != null){
+        loginContent="<div id='loginPane'>";
+            loginContent += "<div class='loginPaneLine'><h style='margin:auto; margin-bottom: 15px'>You're signed in as " + localStorage.getItem('currentUser') + "</h></div>"; 
+            loginContent+="<div class='loginPaneLine'><button onclick='signOut()' style='margin:auto'>Sign Out</button></div>"; 
+        loginContent+="</div>";  
+        document.getElementById('loginContent').innerHTML = loginContent; 
+    }
+}
+
+function signOut(){
+    localStorage.removeItem('currentUser'); 
+    document.getElementById('loginSignup').innerHTML = "<h4> Login/Signup</h4>"; 
+    window.location.reload(); 
+}
 function populateLeaderBoards(){
     scores = JSON.parse(getAllScores());
     topLine = "<div class='scoreLine'><h4>NUMBER</h4><h4>GAME</h4><h4>SCORE</h4><h4>USER</h4></div>";
@@ -31,6 +46,7 @@ function loginUser(){
         alert(username + " logged in! Your scores will now be uploaded to the leaderboards."); 
         localStorage.setItem('currentUser', username); 
         document.getElementById('loginSignup').innerHTML = "Welcome " + username;
+        window.location.reload(); 
     } 
 }
 
