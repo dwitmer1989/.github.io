@@ -2,6 +2,8 @@ username = "";
 
 function populateLeaderBoards(){
     scores = JSON.parse(getAllScores());
+    topLine = "<div class='scoreLine'><h4>NUMBER</h4><h4>GAME</h4><h4>SCORE</h4><h4>USER</h4></div>";
+    document.getElementById('leaderboards').innerHTML += topLine; 
     for(var i = 0; i < scores['scores'].length; i++){
         currentLine = scores['scores'][i]; 
         scoreLine = "<div class='scoreLine'>"; 
