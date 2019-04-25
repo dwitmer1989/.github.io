@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
     <div class="banner">
@@ -17,18 +19,18 @@
           </div>
           
           <div class="bannerTopItem">
-          </div>
-          
-          <div class="bannerTopItem">
             <h4 onclick="window.location.href='/leaderboards.html'">Leader Boards</h4>
           </div>
           
           <div class="bannerTopItem">
-            <div class="bannerTopItemSubItem" onclick="window.location.href='login.html'">
-              <h4>Login/Signup</h4>
-            </div>
             <div class="bannerTopItemSubItem">
-              <button id="donateButton">Donate</button>
+              <button id="donateButton"><h4>Donate</h4></button>
+            </div>
+          </div>
+          
+          <div class="bannerTopItem">
+            <div class="bannerTopItemSubItem" onclick="window.location.href='login.html'">
+              <h4 id ='loginSignup'>Login/Signup</h4>
             </div>
           </div>
       </div>
