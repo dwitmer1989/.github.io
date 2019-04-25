@@ -1,5 +1,21 @@
 username = ""; 
 
+function populateLeaderBoards(){
+    scores = JSON.parse(getAllScores());
+    for(var i = 0; i < scores['scores'].length; i++){
+        currentLine = scores['scores'][i]; 
+        scoreLine = "<div class='scoreLine'>"; 
+            scoreLine += "<h4>"+ (i+1) + ".)</h4>"; 
+            scoreLine += "<h4>" + currentLine['game'] + "</h4>"; 
+            scoreLine += "<h4>" + currentLine['score'] + "</h4>"; 
+            scoreLine += "<h4>" + currentLine['user'] + "</h4>"; 
+        scoreLine += "</div>"; 
+        document.getElementById('leaderboards').innerHTML += scoreLine; 
+    } 
+}
+
+
+//below here is all of the database access functions
 function addGame(game){ 
     response=$.ajax({
         type: "GET",
@@ -35,7 +51,7 @@ function getAllScores(){
         async: false
     }).responseText; 
     
-    alert(response); 
+    return(response); 
 }
 
 function addUser(fName, lName, dob, password, username){
