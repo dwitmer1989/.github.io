@@ -1,7 +1,30 @@
-username = ""; 
 
+//login user on any window that includes this javascript
+document.addEventListener("DOMContentLoaded", function() {
+    if(localStorage.getItem('currentUser') != null){
+        document.getElementById('loginSignup').innerHTML = "<h4>Welcome " + localStorage.getItem('currentUser') + "</h4>"; 
+    } 
+  })
+
+function showLogout(){
+    if(localStorage.getItem('currentUser') != null){
+        loginContent="<div id='loginPane'>";
+            loginContent += "<div class='loginPaneLine'><h style='margin:auto; margin-bottom: 15px'>You're signed in as " + localStorage.getItem('currentUser') + "</h></div>"; 
+            loginContent+="<div class='loginPaneLine'><button onclick='signOut()' style='margin:auto'>Sign Out</button></div>"; 
+        loginContent+="</div>";  
+        document.getElementById('loginContent').innerHTML = loginContent; 
+    }
+}
+
+function signOut(){
+    localStorage.removeItem('currentUser'); 
+    document.getElementById('loginSignup').innerHTML = "<h4> Login/Signup</h4>"; 
+    window.location.reload(); 
+}
 function populateLeaderBoards(){
     scores = JSON.parse(getAllScores());
+    topLine = "<div class='scoreLine'><h4>NUMBER</h4><h4>GAME</h4><h4>SCORE</h4><h4>USER</h4></div>";
+    document.getElementById('leaderboards').innerHTML += topLine; 
     for(var i = 0; i < scores['scores'].length; i++){
         currentLine = scores['scores'][i]; 
         scoreLine = "<div class='scoreLine'>"; 
@@ -14,8 +37,66 @@ function populateLeaderBoards(){
     } 
 }
 
+function loginUser(){
+    username = document.getElementById('loginUsername').value; 
+    password = document.getElementById('loginPassword').value; 
+    if(checkUserLogin(username, password) == "false")
+        alert("Incorrect username and/or password. If you haven't already signed up, click on the sign up button below."); 
+    else{
+        alert(username + " logged in! Your scores will now be uploaded to the leaderboards."); 
+        localStorage.setItem('currentUser', username); 
+        document.getElementById('loginSignup').innerHTML = "Welcome " + username;
+        window.location.reload(); 
+    } 
+}
 
-//below here is all of the database access functions
+function signUpUser(){
+    fName = document.getElementById('suFName').value; 
+    lName = document.getElementById('suLName').value;
+    dob = document.getElementById('suDOB').value;
+    username = document.getElementById('suUsername').value;
+    password = document.getElementById('suPassword').value;
+    passwordConfirm = document.getElementById('suPasswordConfirm').value;
+
+    //make sure none of the spots are void
+    if(fName ==""){
+        alert("Please enter a value for first name"); 
+        return; 
+    }
+    if(lName ==""){
+        alert("Please enter a value for last name"); 
+        return; 
+    }
+    if(dob==""){
+        alert("Please enter a date for birthdate"); 
+        return; 
+    }
+    if(username ==""){
+        alert("Please enter a value for username"); 
+        return; 
+    }
+    if(password ==""){
+        alert("Please enter a value for password"); 
+        return; 
+    }
+    if(passwordConfirm == ""){
+        alert("Please enter a value for confirmation password"); 
+        return; 
+    }
+    if(password != passwordConfirm){
+        alert("Password mismatch"); 
+        return; 
+    }
+     
+    //if the function has gotten this far, there should be no errors in the input. 
+    //add the user
+    alert(addUser(fName, lName, dob, password, username));  
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------//
+//----------------------------------below here is all of the database access functions--------------------------------------------//
+//--------------------------------------------------------------------------------------------------------------------------------//
+
 function addGame(game){ 
     response=$.ajax({
         type: "GET",
@@ -63,9 +144,9 @@ function addUser(fName, lName, dob, password, username){
     }).responseText; 
     
     if(response != "")
-        alert(response); 
+        return(response); 
     else   
-        alert("Account added. Have fun!"); 
+        return("Account added. Have fun!"); 
 }
 
 function checkUserLogin(username, password){
@@ -75,5 +156,5 @@ function checkUserLogin(username, password){
         url: "https://www.relevantdevelopment.tech/GFTDatabaseConnector/loginUser.php",
         async: false
     }).responseText; 
-    alert(response); 
+    return(response); 
 }

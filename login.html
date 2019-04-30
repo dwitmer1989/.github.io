@@ -10,25 +10,26 @@
     <script src="main.js"></script> 
   </head>
 
-  <body>
+  <body onload="showLogout()">
     <div class="banner noGamePane">
       <div class="bannerTop">
           <div class="bannerTopItem" onclick="window.location.href='index.html'">
             <h1>Games4Teens</h1>
           </div>
           
-          <div class="bannerTopItem">
-          </div>
-          
-          <div class="bannerTopItem">
+           <div class="bannerTopItem">
+            <h4 onclick="window.location.href='/leaderboards.html'">Leader Boards</h4>
           </div>
           
           <div class="bannerTopItem">
             <div class="bannerTopItemSubItem">
-              <h4>Login/Signup</h4>
+              <button id="donateButton"><h4>Donate</h4></button>
             </div>
-            <div class="bannerTopItemSubItem">
-              <button id="donateButton">Donate</button>
+          </div>
+          
+          <div class="bannerTopItem">
+            <div id ='loginSignup' class="bannerTopItemSubItem">
+              <h4>Login/Signup</h4>
             </div>
           </div>
       </div>
@@ -42,29 +43,23 @@
             </div>
             <div class="loginPaneLine">
                 <div class="loginLeft">
-                    Email:
+                    username:
                 </div>
                 <div class="loginRight">
-                    <input>
+                    <input id='loginUsername' >
                 </div>
                 <div class="loginLeft">
                     Password: 
                 </div>
                 <div class="loginRight">
-                    <input>
+                    <input id='loginPassword'>
                 </div>
             </div>
             <div class="loginPaneLine">
-                <button style="margin:auto; margin-top: 10px; background: whiteSmoke; width: 70px; border-radius: 5px">Log in</button>
-            </div>
-            <div class="loginPaneLine">
-                <div class="signInWithGoogle">
-                    <image src="Images/googleIcon.png" style="height: 30px">
-                    Sign in with Google
-                </div>
+                <button onclick="loginUser()"style="margin:auto; margin-top: 10px; background: whiteSmoke; width: 70px; border-radius: 5px">Log in</button>
             </div>
             <div class = "loginPaneLine">
-              <h align="center" style="width:100%; margin-top: 50px"> Don't have an account?</h>
+              <h align="center" style="width:100%; margin-top: 20px"> Don't have an account?</h>
             </div>
             <div class="loginPaneLine">
               <button style="margin:auto; margin-top: 10px; background: whiteSmoke; width: 70px; border-radius: 5px" onclick="window.location.href='signup.html'">Sign up</button>

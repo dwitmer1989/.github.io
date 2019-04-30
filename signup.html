@@ -6,6 +6,8 @@
       content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Games for Teens | Sign Up </title>
     <link rel="stylesheet" href="../style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script> 
   </head>
 
   <body>
@@ -15,18 +17,19 @@
             <h1>Games4Teens</h1>
           </div>
           
-          <div class="bannerTopItem">
-          </div>
-          
-          <div class="bannerTopItem">
+           <div class="bannerTopItem">
+            <h4 onclick="window.location.href='/leaderboards.html'">Leader Boards</h4>
           </div>
           
           <div class="bannerTopItem">
             <div class="bannerTopItemSubItem">
-              <h4>Login/Signup</h4>
+              <button id="donateButton"><h4>Donate</h4></button>
             </div>
-            <div class="bannerTopItemSubItem">
-              <button id="donateButton">Donate</button>
+          </div>
+          
+          <div class="bannerTopItem">
+            <div id ='loginSignup' class="bannerTopItemSubItem">
+              <h4>Login/Signup</h4>
             </div>
           </div>
       </div>
@@ -36,57 +39,58 @@
 
     <div style="width: 100%; display: flex;">
         <div id="signupPane">
-            <div class="signupSubPane">
-                <div style="width:100%">
-                    Create an account
-                </div>
+          <div class="signupSubPane">
+              <div style="width:100%;">
+                  <h style="margin: auto;">Create an account</h>
+              </div>
 
-                <div class="signupLeft">
-                    First Name: 
-                </div>
-                <div class="signupRight">
-                    <input>
-                </div>
+              <div class="signupLeft">
+                  First Name: 
+              </div>
+              <div class="signupRight">
+                  <input id='suFName'>
+              </div>
 
-                <div class="signupLeft">
-                    Last Name: 
-                </div>
-                <div class="signupRight">
-                    <input>
-                </div>
+              <div class="signupLeft">
+                  Last Name: 
+              </div>
+              <div class="signupRight">
+                  <input id='suLName'>
+              </div>
 
-                <div class="signupLeft">
-                    Email: 
-                </div>
-                <div class="signupRight">
-                    <input>
-                </div>
+              <div class="signupLeft">
+                  username: 
+              </div>
+              <div class="signupRight">
+                  <input id='suUsername'>
+              </div>
             </div>
 
             <div class="signupSubPane" style="padding-top: 23px">
-                <div class="signupLeft">
-                    Date of Birth: 
-                </div>
-                <div class="signupRight">
-                    <input>
-                </div>
+              <div class="signupLeft">
+                  Date of Birth: 
+              </div>
+              <div class="signupRight">
+                  <input type="date" id='suDOB'>
+              </div>
 
-                <div class="signupLeft">
-                    Password: 
-                </div>
-                <div class="signupRight">
-                    <input>
-                </div>
+              <div class="signupLeft">
+                  Password: 
+              </div>
+              <div class="signupRight">
+                  <input id='suPassword'>
+              </div>
 
-                <div class="signupLeft">
-                    Confirm Password: 
-                </div>
-                <div class="signupRight">
-                    <input>
-                </div>
+              <div class="signupLeft">
+                  Confirm Password: 
+              </div>
+              <div class="signupRight">
+                  <input id='suPasswordConfirm'>
+              </div>
             </div>
-
-
+            <div style="width: 100%; margin:auto; display: flex;">
+              <button onclick="signUpUser()"; style="margin: auto; margin-top: 15px; padding: 7px 25px; border-radius: 15px; font-size: 15px">Submit</button>
+            </div>
         </div>
     </div>
 
