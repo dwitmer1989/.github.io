@@ -83,7 +83,7 @@ body{
 }
 
 .advertisement{
-    border-style: solid; 
+    border-style: hidden;
     width: 250px;
     margin: auto; 
     margin-top: -20px;  
