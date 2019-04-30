@@ -233,10 +233,10 @@ body{
     color: black;
 }
 
-.signupSubPane{
+.signupSubPane{ 
     display:flex;
     flex-wrap: wrap;
-    width: 50%; 
+    width: 49%; 
     height: 100%; 
     text-align: left;
 }
@@ -245,7 +245,7 @@ body{
     width: 30%;
     margin:auto;
 }
-.signupRight{
+.signupRight{ 
     width: 60%;
     margin:auto;
 }
