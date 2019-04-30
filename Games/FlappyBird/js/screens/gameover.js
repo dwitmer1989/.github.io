@@ -1,4 +1,3 @@
- logScore("Flappy Bird", "dwitmer1989", "150"); 
  game.GameOverScreen = me.ScreenObject.extend({
     init: function() {
         this.savedData = null;
@@ -110,30 +109,3 @@
     }
 });
 
-function logScore(game, user, score){
-    //the first time a score is recorded for a game, the game is added to the database. Therefore, we call addGame() every time
-    //we log a score in case the game doesn't exist. The server side knows this and only trys to add the game if it doesn't 
-    //exist in the database. 
-    addGame(game); 
-
-    //add the score for the user. This function will check whether or not the user exists and return 1 if the user doesn't exist. 
-    response=$.ajax({
-        type: "GET",
-        data: ({game: game, user: user, score: score}),
-        url: "https://www.relevantdevelopment.tech/GFTDatabaseConnector/logScore.php",
-        async: false
-    }).responseText; 
-    
-    return response; 
-}
-
-function addGame(game){ 
-    response=$.ajax({
-        type: "GET",
-        data: ({game: game}),
-        url: "https://www.relevantdevelopment.tech/GFTDatabaseConnector/addGame.php",
-        async: false
-    }).responseText; 
-    
-    return response; 
-}
