@@ -6,21 +6,11 @@ function initPaymentRequest() {
       supportedMethods: 'basic-card',
       data: {supportedNetworks: networks, supportedTypes: types},
     }];
-  
+
     let details = {
-      total: {label: 'Final price', amount: {currency: 'USD', value: '4.99'}},
-      displayItems: [
-        {
-          label: 'Original price amount',
-          amount: {currency: 'USD', value: '14.99'},
-        },
-        {
-          label: 'Student discount',
-          amount: {currency: 'USD', value: '-10.00'},
-        },
-      ],
+      total: {label: 'Donation Amount', amount: {currency: 'USD', value: '5.00'}},
     };
-  
+
     return new PaymentRequest(supportedInstruments, details);
   }
   

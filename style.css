@@ -20,7 +20,7 @@ body{
     width: 100vw; 
     background-image: url("Images/WebBannerBackground.png"); 
     background-size: cover; 
-    height: 350px; 
+    height: 370px; 
     text-align: center;
     align-content: center; 
     position: sticky;
@@ -221,7 +221,7 @@ body{
     background: whitesmoke;
 }
 
-#signupPane{
+#signupPane, #donateBox{
     width: 1000px;
     margin:auto;
     margin-top: 70px;
@@ -252,6 +252,15 @@ body{
 
 .signupPaneLine{
     width: 100%;
+}
+
+.fullWidth{
+    width: 100%; 
+    text-align: center; 
+}
+
+.halfWidth{
+    width: 50%;
 }
 
 
