@@ -37,6 +37,8 @@ function populateLeaderBoards(){
     } 
 }
 
+
+
 function loginUser(){
     username = document.getElementById('loginUsername').value; 
     password = document.getElementById('loginPassword').value; 
@@ -91,6 +93,24 @@ function signUpUser(){
     //if the function has gotten this far, there should be no errors in the input. 
     //add the user
     alert(addUser(fName, lName, dob, password, username));  
+}
+
+function submitScore(game){
+    score = document.getElementById('scoreInput').value; 
+    user = localStorage.getItem('currentUser'); 
+    if(user == null){
+        alert("scores can only be logged for existing users. Please login or sign up"); 
+        return; 
+    } 
+    if(score == ""){
+        alert("you didn't enter a score! Please enter a score and try again"); 
+        return; 
+    }
+    if(logScore(game, user, score) == '0'){
+        alert("your score has been logged!"); 
+    } else{
+        alert("Something went wrong and your score has not been logged :("); 
+    }
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------//
